@@ -3,6 +3,11 @@
   "description": "An example of a composer plugin",
   "type": "composer-plugin",
   "license": "MIT",
+  "authors": [
+    {
+      "name": "Cslant"
+    }
+  ],
   "require": {
     "composer-plugin-api": "^2.0"
   },
