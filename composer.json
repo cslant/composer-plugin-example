@@ -22,5 +22,6 @@
   },
   "extra": {
     "class": "Cslant\\ComposerPlugin\\Example\\Plugin"
-  }
+  },
+  "minimum-stability": "stable"
 }
