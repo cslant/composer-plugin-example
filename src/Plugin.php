@@ -5,13 +5,20 @@ namespace Cslant\ComposerPlugin\Example;
 use Composer\Composer;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
+use Composer\Plugin\PluginEvents;
+use Composer\Script\ScriptEvents;
 use Composer\EventDispatcher\EventSubscriberInterface;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
-    public function activate(Composer $composer, IOInterface $io)
+    protected Composer $composer;
+
+    protected IOInterface $io;
+
+    public function activate(Composer $composer, IOInterface $io): void
     {
-        echo __METHOD__ . "\n";
+        $this->composer = $composer;
+        $this->io = $io;
     }
 
     public function deactivate(Composer $composer, IOInterface $io)
@@ -22,18 +29,16 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     {
     }
 
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
-        return array(
-            'post-install-cmd' => 'installOrUpdate',
-            'post-update-cmd' => 'installOrUpdate',
-        );
+        return [
+            PluginEvents::INIT => ['installOrUpdate', 0],
+            ScriptEvents::POST_INSTALL_CMD => ['installOrUpdate', 0],
+        ];
     }
 
-    public function installOrUpdate($event)
+    public function installOrUpdate($event): void
     {
-        echo __METHOD__ . "\n";
-        echo get_class($event) . "\n";
-        echo $event->getName() . "\n";
+        $this->io->write('Hello world!');
     }
 }
