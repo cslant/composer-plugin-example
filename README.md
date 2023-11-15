@@ -1,6 +1,6 @@
 # Composer plugin example
 
-Here is a simple example of composer plugin.
+Here is a simple example of a composer plugin.
 
 ## Structure
 
@@ -46,3 +46,9 @@ ls vendor/cslant/composer-plugin-example
 ## Reference
 
 - [Composer Plugin API](https://getcomposer.org/doc/articles/plugins.md)
+
+## Composer install demo
+
+```bash
+composer require cslant/composer-plugin-example
+```
