@@ -9,4 +9,3 @@ trim_trailing_whitespace = false
 
 [*.php]
 ij_php_concat_spaces = true # Add spaces around concatenation operator (.=)
-

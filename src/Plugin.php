@@ -3,6 +3,7 @@
 namespace Cslant\ComposerPlugin\Example;
 
 use Composer\Composer;
+use Composer\EventDispatcher\Event;
 use Composer\IO\IOInterface;
 use Composer\Plugin\PluginInterface;
 use Composer\Plugin\PluginEvents;
@@ -37,7 +38,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
         ];
     }
 
-    public function installOrUpdate($event): void
+    public function installOrUpdate(Event $event): void
     {
         $this->io->write('Hello world!');
     }
