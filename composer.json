@@ -2,14 +2,22 @@
   "name": "cslant/composer-plugin-example",
   "description": "An example of a composer plugin",
   "type": "composer-plugin",
+  "keywords": [
+    "composer",
+    "plugin",
+    "cslant",
+    "composer-plugin-example",
+    "composer-plugin"
+  ],
   "license": "MIT",
   "authors": [
     {
-      "name": "Cslant"
+      "name": "Cslant",
+      "homepage": "https://cslant.com"
     }
   ],
   "require": {
-    "php":"^8.0",
+    "php": "^8.0",
     "composer-plugin-api": "^2.0"
   },
   "require-dev": {
