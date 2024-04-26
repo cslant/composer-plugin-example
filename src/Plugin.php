@@ -1,6 +1,6 @@
 <?php
 
-namespace Cslant\ComposerPlugin\Example;
+namespace CSlant\ComposerPlugin\Example;
 
 use Composer\Composer;
 use Composer\EventDispatcher\Event;
