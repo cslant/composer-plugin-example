@@ -7,12 +7,13 @@
     "plugin",
     "cslant",
     "composer-plugin-example",
-    "composer-plugin"
+    "composer-plugin",
+    "cslant-plugin"
   ],
   "license": "MIT",
   "authors": [
     {
-      "name": "Cslant",
+      "name": "CSlant",
       "homepage": "https://cslant.com"
     }
   ],
@@ -25,10 +26,10 @@
   },
   "autoload": {
     "psr-4": {
-      "Cslant\\ComposerPlugin\\Example\\": "src/"
+      "CSlant\\ComposerPlugin\\Example\\": "src/"
     }
   },
   "extra": {
-    "class": "Cslant\\ComposerPlugin\\Example\\Plugin"
+    "class": "CSlant\\ComposerPlugin\\Example\\Plugin"
   }
 }
